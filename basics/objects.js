@@ -1,13 +1,10 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var user = {
-    name: "David",
-    email: "david@gmail.com",
-    isActive: true,
-};
+// wrong syntax
 // function createUser({ name: string, isPaid: boolean }) {
 //     console.log(name);
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
+// object parameter type
 function createUser(obj) {
     console.log(obj.name);
 }
@@ -16,6 +13,7 @@ var newUser = { name: "string", isPaid: false, email: "@gmail.com" };
 // createUser({ name: "string", isPaid: false, email: "@gmail.com" });
 // this dosn't give error
 createUser(newUser);
+// return type object
 function createCourse() {
     return { name: "reactJs", price: 399 };
 }
