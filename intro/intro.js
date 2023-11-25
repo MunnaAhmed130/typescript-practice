@@ -1,19 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var user = { name: "Adam", age: "20" };
+const user = { name: "Adam", age: "20" };
 console.log(user);
 // types by inference
 // string
-var greetings = "Hello World";
+let greetings = "Hello World";
 greetings.toLowerCase();
 console.log(greetings);
 // number
-var userId = 334455.5;
+let userId = 334455.5;
 // userId.
 // boolean
-var isLoggedIn = true;
+let isLoggedIn = true;
 console.log(isLoggedIn.valueOf());
-var value;
+let value;
 function something() {
     return "Hello";
 }
