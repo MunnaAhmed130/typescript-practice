@@ -1,27 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // array type
-const names: string[] = [];
-
+var names = [];
 names.push("Ash");
-
 // 2 ways of annotating array type
 // const numbers: number[] = [];
-const numbers: Array<number> = [];
+var numbers = [];
 numbers.push(2);
-
-type User = {
-    name: string;
-    isActive: boolean;
-};
-
 // types of array of objects
-const allUsers: User[] = [];
-
+var allUsers = [];
 allUsers.push({ name: "", isActive: false });
-
 // complex array structure
-const MLModels: number[][] = [
+var MLModels = [
     [255, 255, 255],
     [255, 255, 255],
 ];
-
-export {};
