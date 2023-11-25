@@ -1,9 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// explicit return type
 function addTwo(num) {
     return num + 2;
     // return "hello";
 }
+var value = addTwo(5);
+// value = "hello"
+// type inference with function return type
 function getUpper(val) {
     return val.toUpperCase();
 }
@@ -12,34 +14,39 @@ function signUpUser(name, email, isPaid) { }
 var loginUser = function (name, email, isPaid) {
     if (isPaid === void 0) { isPaid = false; }
 };
-var value = addTwo(5);
-// value = "hello"
-addTwo(5);
-getUpper("Hello");
-signUpUser("Adam", "", false);
-loginUser("Adam", "email");
+// addTwo(5);
+// getUpper("Hello");
+// signUpUser("Adam", "", false);
+// loginUser("Adam", "email");
+// union return type - string & boolean are union member's
 function getValue(myVal) {
-    // if (myVal > 5) {
-    //     return true;
-    // }
-    // return "200 OK";
-    return false;
+    if (myVal > 5) {
+        return true;
+    }
+    return "200 OK";
 }
+// array function type
 var getHello = function (s) {
     return "";
 };
+// type inference with array
+var heros = ["thor", "spiderman", "ironman"];
+// template literals are changed while compiling to .js file
 function greet(person, date) {
     console.log("Hello ".concat(person, ", today is ").concat(date.toDateString(), "!"));
 }
+// greet("Maddison", new Date());
 greet("Maddison", new Date());
-// const heros = [1, "spiderman", "ironman"];
-var heros = ["thor", "spiderman", "ironman"];
 heros.map(function (hero) {
     return "".concat(hero, " is a hero");
 });
+// return type void doesn't return anything
 function consoleError(errmsg) {
     console.log(errmsg);
 }
+// return type never doesn't return and throws an exception
 function handleError(errmsg) {
-    console.log(errmsg);
+    throw new Error(errmsg);
 }
+// console.log(4/[])
+// export {};
