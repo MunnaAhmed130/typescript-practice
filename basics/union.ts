@@ -31,3 +31,21 @@ getDbId(2);
 getDbId("2");
 
 // array
+const data: number[] = [1, 2, 3];
+const data1: string[] = ["adam"];
+// array union
+const data2: (string | number)[] = ["adam", 2, 3];
+
+// literal type
+let pi: 3.14 = 3.14;
+
+// error
+// pi = 3.145
+
+// literal type
+let seatAllotment: "aisle" | "middle" | "window" = "middle";
+
+// error
+// seatAllotment = "crew";
+
+export {};

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // union with primitive
 var score = 33;
 score = 44;
@@ -17,3 +19,13 @@ function getDbId(id) {
 getDbId(2);
 getDbId("2");
 // array
+var data = [1, 2, 3];
+var data1 = ["adam"];
+// array union
+var data2 = ["adam", 2, 3];
+// literal type
+var pi = 3.14;
+// error
+// pi = 3.145
+// literal type
+var seatAllotment = "middle";
