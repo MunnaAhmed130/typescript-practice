@@ -1,10 +1,11 @@
 // arrays dont have any length or specific position checks
 // const user: (string | number)[] = [1, "John"];
 
+// tuples
 // tuple restricts by order
 let user: [string, number, boolean];
 user = ["", 4, false];
-
+// user.sort();
 // tuple also restricts by length
 let rgb: [number, number, number] = [255, 255, 255];
 // error
@@ -14,9 +15,28 @@ let rgb: [number, number, number] = [255, 255, 255];
 type User = [number, string];
 
 const newUser: User = [112, ""];
-newUser[1] = "";
+// error - cannot change number to
+// newUser[0] = "";
 
-// error
+// seems like this should give error but doesn't
 newUser.push(1);
+
+// Enums
+// this enum produces IIFE
+enum SeatChoice {
+    AISLE,
+    MIDDLE,
+    WINDOW,
+}
+
+// this produces clean & easy to read code
+const enum SeatChoices {
+    AISLE,
+    MIDDLE,
+    WINDOW,
+}
+
+const hcSeat = SeatChoice.MIDDLE;
+const hcSeat1 = SeatChoices.MIDDLE;
 
 export {};
