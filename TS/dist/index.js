@@ -16,6 +16,9 @@ class NewUser {
     ) {
         this.email = email;
         this.name = name;
+        // parent class's variables or methods with private keyword is not accessible to child class
+        // private _courseCount: number = 1;
+        // only parent & child classes can use protected variables & methods
         this._courseCount = 1;
         this.user = "user";
     }
@@ -35,6 +38,16 @@ class NewUser {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+class SubUser extends NewUser {
+    constructor() {
+        // parent class's variables or methods with private keyword is not accessible to child class
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const adam = new User("email", "adam");

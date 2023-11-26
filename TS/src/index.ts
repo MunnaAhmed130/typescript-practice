@@ -18,7 +18,10 @@ class User {
 
 // better way
 class NewUser {
-    private _courseCount: number = 1;
+    // parent class's variables or methods with private keyword is not accessible to child class
+    // private _courseCount: number = 1;
+    // only parent & child classes can use protected variables & methods
+    protected _courseCount: number = 1;
     readonly user: string = "user";
     constructor(
         public email: string,
@@ -40,6 +43,15 @@ class NewUser {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+
+class SubUser extends NewUser {
+    // parent class's variables or methods with private keyword is not accessible to child class
+
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 
