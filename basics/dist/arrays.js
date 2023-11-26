@@ -5,6 +5,9 @@ const names = [];
 names.push("Ash");
 // type inference with array
 const heros = ["thor", "spiderman", "ironman"];
+heros.map((hero) => {
+    return `${hero} is a hero`;
+});
 let things = [1, true, "hello"];
 // 2 ways of annotating array type
 // const numbers: number[] = [];

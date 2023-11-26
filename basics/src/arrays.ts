@@ -1,10 +1,13 @@
 // array type
 const names: string[] = [];
-
 names.push("Ash");
 
 // type inference with array
 const heros = ["thor", "spiderman", "ironman"];
+
+heros.map((hero): string => {
+    return `${hero} is a hero`;
+});
 
 let things = [1, true, "hello"];
 

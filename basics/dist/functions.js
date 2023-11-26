@@ -6,12 +6,13 @@ function addTwo(num) {
 }
 let value = addTwo(5);
 // value = "hello"
+// console.log(value);
 // type inference with function return type
 function getUpper(val) {
     return val.toUpperCase();
 }
 function signUpUser(name, email, isPaid) { }
-// default parameter
+// arrow function & default parameter
 let loginUser = (name, email, isPaid = false) => { };
 // addTwo(5);
 // getUpper("Hello");
@@ -28,17 +29,30 @@ function getValue(myVal) {
 const getHello = (s) => {
     return "";
 };
-// type inference with array
-const heros = ["thor", "spiderman", "ironman"];
 // template literals are changed while compiling to .js file
 function greet(person, date) {
     console.log(`Hello ${person}, today is ${date.toDateString()}!`);
 }
 // greet("Maddison", new Date());
 greet("Maddison", new Date());
-heros.map((hero) => {
-    return `${hero} is a hero`;
-});
+// wrong syntax
+// function createUser({ name: string, isPaid: boolean }) {
+//     console.log(name);
+// }
+// object parameter type
+function createUser(obj) {
+    console.log(obj.name);
+}
+let newUser = { name: "string", isPaid: false, email: "@gmail.com" };
+// this gives error
+// createUser({ name: "string", isPaid: false, email: "@gmail.com" });
+// this dosn't give error
+createUser(newUser);
+// return type object
+function createCourse() {
+    return { name: "reactJs", price: 399 };
+}
+createCourse();
 // return type void doesn't return anything
 function consoleError(errmsg) {
     console.log(errmsg);

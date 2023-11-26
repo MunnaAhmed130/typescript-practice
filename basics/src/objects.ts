@@ -1,26 +1,14 @@
-// wrong syntax
-// function createUser({ name: string, isPaid: boolean }) {
-//     console.log(name);
-// }
+// object type inference
+let user = { name: "string", isPaid: false, email: "@gmail.com" };
 
-// object parameter type
-function createUser(obj: { name: string; isPaid: boolean }) {
-    console.log(obj.name);
-}
+// error
+// user.email = 1
 
-let newUser = { name: "string", isPaid: false, email: "@gmail.com" };
-
-// this gives error
-// createUser({ name: "string", isPaid: false, email: "@gmail.com" });
-
-// this dosn't give error
-createUser(newUser);
-
-// return type object
-function createCourse(): { name: string; price: number } {
-    return { name: "reactJs", price: 399 };
-}
-
-createCourse();
+// object explicit type
+let newUser: { name: string; age: number; id: number } = {
+    name: "Adam",
+    age: 40,
+    id: 1,
+};
 
 export {};
