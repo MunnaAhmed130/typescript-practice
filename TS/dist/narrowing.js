@@ -55,3 +55,36 @@ function multiplyAll(values, factor) {
     }
 }
 console.log(multiplyAll([5], 5));
+function isAdminAccount(account) {
+    if ("isAdmin" in account) {
+        // console.log(account.isAdmin);
+        return account.isAdmin;
+    }
+}
+const david = {
+    name: "david",
+    email: "email@david.com",
+    isAdmin: true,
+};
+isAdminAccount(david);
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "bird food";
+    }
+}

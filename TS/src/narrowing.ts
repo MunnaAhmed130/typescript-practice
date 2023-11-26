@@ -63,3 +63,56 @@ function multiplyAll(
 }
 
 console.log(multiplyAll([5], 5));
+
+interface LiteUser {
+    name: string;
+    email: string;
+}
+
+interface LiteAdmin {
+    name: string;
+    email: string;
+    isAdmin: boolean;
+}
+
+function isAdminAccount(account: LiteUser | LiteAdmin) {
+    if ("isAdmin" in account) {
+        // console.log(account.isAdmin);
+        return account.isAdmin;
+    }
+}
+
+const david: LiteAdmin = {
+    name: "david",
+    email: "email@david.com",
+    isAdmin: true,
+};
+
+isAdminAccount(david);
+
+function logValue(x: Date | string) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    } else {
+        console.log(x.toUpperCase());
+    }
+}
+
+type Fish = { swim: () => void };
+type Bird = {
+    fly: () => void;
+};
+
+function isFish(pet: Fish | Bird): pet is Fish {
+    return (pet as Fish).swim !== undefined;
+}
+
+function getFood(pet: Fish | Bird) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    } else {
+        pet;
+        return "bird food";
+    }
+}
