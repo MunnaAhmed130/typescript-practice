@@ -133,6 +133,7 @@ interface Rectangle {
     width: number;
 }
 
+// discriminated unions
 type Shape = Circle | Square | Rectangle;
 
 function getTrueShape(shape: Shape) {
@@ -151,7 +152,7 @@ function getArea(shape: Shape) {
 
         case "rectangle":
             return;
-
+        // exhaustiveness checking
         default:
             const _exhaustiveCheck: never = shape;
             return _exhaustiveCheck;
