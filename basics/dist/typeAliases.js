@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 // type alias as type
-var myUser = {
+let myUser = {
     _id: "12345",
     name: "Adam",
     email: "ad@yahoo.com",
@@ -11,7 +11,7 @@ myUser.name = "Ed";
 // cannot assign _id as it is read only
 // myUser._id = ""
 // object
-var user = {
+const user = {
     name: "David",
     email: "david@gmail.com",
     isActive: true,

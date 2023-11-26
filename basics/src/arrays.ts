@@ -3,8 +3,14 @@ const names: string[] = [];
 
 names.push("Ash");
 
+// type inference with array
+const heros = ["thor", "spiderman", "ironman"];
+
+let things = [1, true, "hello"];
+
 // 2 ways of annotating array type
 // const numbers: number[] = [];
+
 const numbers: Array<number> = [];
 numbers.push(2);
 

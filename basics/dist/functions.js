@@ -1,9 +1,10 @@
+"use strict";
 // explicit return type
 function addTwo(num) {
     return num + 2;
     // return "hello";
 }
-var value = addTwo(5);
+let value = addTwo(5);
 // value = "hello"
 // type inference with function return type
 function getUpper(val) {
@@ -11,9 +12,7 @@ function getUpper(val) {
 }
 function signUpUser(name, email, isPaid) { }
 // default parameter
-var loginUser = function (name, email, isPaid) {
-    if (isPaid === void 0) { isPaid = false; }
-};
+let loginUser = (name, email, isPaid = false) => { };
 // addTwo(5);
 // getUpper("Hello");
 // signUpUser("Adam", "", false);
@@ -26,19 +25,19 @@ function getValue(myVal) {
     return "200 OK";
 }
 // array function type
-var getHello = function (s) {
+const getHello = (s) => {
     return "";
 };
 // type inference with array
-var heros = ["thor", "spiderman", "ironman"];
+const heros = ["thor", "spiderman", "ironman"];
 // template literals are changed while compiling to .js file
 function greet(person, date) {
-    console.log("Hello ".concat(person, ", today is ").concat(date.toDateString(), "!"));
+    console.log(`Hello ${person}, today is ${date.toDateString()}!`);
 }
 // greet("Maddison", new Date());
 greet("Maddison", new Date());
-heros.map(function (hero) {
-    return "".concat(hero, " is a hero");
+heros.map((hero) => {
+    return `${hero} is a hero`;
 });
 // return type void doesn't return anything
 function consoleError(errmsg) {

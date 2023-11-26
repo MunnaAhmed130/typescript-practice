@@ -4,12 +4,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // tuples
 // tuple restricts by order
-var user;
+let user;
 user = ["", 4, false];
 // user.sort();
 // tuple also restricts by length
-var rgb = [255, 255, 255];
-var newUser = [112, ""];
+let rgb = [255, 255, 255];
+const newUser = [112, ""];
 // error - cannot change number to
 // newUser[0] = "";
 // seems like this should give error but doesn't
@@ -22,5 +22,5 @@ var SeatChoice;
     SeatChoice[SeatChoice["MIDDLE"] = 1] = "MIDDLE";
     SeatChoice[SeatChoice["WINDOW"] = 2] = "WINDOW";
 })(SeatChoice || (SeatChoice = {}));
-var hcSeat = SeatChoice.MIDDLE;
-var hcSeat1 = 1 /* SeatChoices.MIDDLE */;
+const hcSeat = SeatChoice.MIDDLE;
+const hcSeat1 = 1 /* SeatChoices.MIDDLE */;

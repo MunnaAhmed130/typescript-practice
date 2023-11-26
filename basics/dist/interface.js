@@ -1,4 +1,5 @@
-var firstUser = {
+"use strict";
+const firstUser = {
     dbId: 11,
     email: "",
     userId: 5,
@@ -6,17 +7,16 @@ var firstUser = {
     // startTrial: function () {
     //     return "";
     // },
-    startTrial: function () {
+    startTrial: () => {
         return "Trial started";
     },
     // not adding parameter doesn't give error
-    getCoupon: function (name, off) {
-        if (off === void 0) { off = 10; }
+    getCoupon: (name, off = 10) => {
         return 0;
     },
     githubToken: "",
 };
-var firstAdmin = {
+const firstAdmin = {
     dbId: 11,
     email: "",
     userId: 5,
@@ -24,12 +24,11 @@ var firstAdmin = {
     // startTrial: function () {
     //     return "";
     // },
-    startTrial: function () {
+    startTrial: () => {
         return "Trial started";
     },
     // not adding parameter doesn't give error
-    getCoupon: function (name, off) {
-        if (off === void 0) { off = 10; }
+    getCoupon: (name, off = 10) => {
         return 0;
     },
     githubToken: "",

@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function createUser(obj) {
     console.log(obj.name);
 }
-var newUser = { name: "string", isPaid: false, email: "@gmail.com" };
+let newUser = { name: "string", isPaid: false, email: "@gmail.com" };
 // this gives error
 // createUser({ name: "string", isPaid: false, email: "@gmail.com" });
 // this dosn't give error
