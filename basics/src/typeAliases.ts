@@ -1,4 +1,16 @@
 // type alias
+type rgb = [number, number, number];
+
+function getRandomColor(): rgb {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return [r, g, b];
+}
+
+console.log(getRandomColor());
+console.log(getRandomColor());
+// type aliases are only almost the same as interface for object
 type User = {
     // readonly object property
     readonly _id?: string;
