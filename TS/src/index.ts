@@ -32,7 +32,7 @@ class NewUser {
         console.log("Token deleted");
     }
     get getAppleEmail(): string {
-        return `{this.email}`;
+        return `${this.email}`;
     }
     get courseCount(): number {
         return this._courseCount;
